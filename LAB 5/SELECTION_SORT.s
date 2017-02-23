@@ -24,10 +24,11 @@ loop  LDR R2, [R0], #4
 	MOV R3, #0
 	
 o_loop	MOV R1, R0
+		MOV R8, R0
 		LDR R4, [R0]
 		MOV R6, #9
 		SUB R6, R3
-		MOV R7, #0xFFFFFFFF
+		MOV R7, R4
 i_loop	LDR R5, [R1, #4]!
 		CMP R7, R5
 		MOVHI R7, R5
